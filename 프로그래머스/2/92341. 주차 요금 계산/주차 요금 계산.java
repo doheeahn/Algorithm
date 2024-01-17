@@ -1,6 +1,6 @@
 import java.util.*;
 class Solution {
-    static class Car implements Comparable<Car>{
+    static class Car {
         String n;
         int t;
         public Car(String n,int t){
@@ -8,10 +8,6 @@ class Solution {
             this.t =t;
         }
         
-        @Override
-        public int compareTo(Car o){
-            return this.n.compareTo(o.n);
-        }
     }
     public int[] solution(int[] fees, String[] records) {
 
@@ -65,7 +61,7 @@ class Solution {
                 list.add(new Car(m.getKey(),result)); 
     }
 
-        Collections.sort(list);
+        Collections.sort(list, (o1,o2)->o1.n.compareTo(o2.n));
         int[] answer = new int[list.size()];
         int i=0;
         for(Car c:list){
