@@ -20,10 +20,10 @@ class Solution {
                 if(!arr[s]){
                     arr[s] = true;
                     answer++;
-                }
-                
+                }  
             }
         }
+        
         return answer;
     }
 }
