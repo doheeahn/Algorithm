@@ -44,7 +44,7 @@ public class Main {
 		while(!queue.isEmpty()) {
 			list.add(Integer.parseInt(queue.poll()));
 		}
-		Collections.sort(list);
+		//Collections.sort(list);
 		for(int i : list) {
 			System.out.println(i);
 		}
