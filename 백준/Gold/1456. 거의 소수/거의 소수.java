@@ -30,14 +30,12 @@ public class Main{
 		for(int i=2;i<=(int)Math.sqrt(b);i++) {
 			if(!arr[i]) {//소수
 				long num = i;
-				while(num*i <= b) {
+				while(num*i <= b && (num*i)%i==0) {//num제곱하면서 long범위 넘어가는거 처리 해줘야 정담
 					num *=i;//num을 제곱하면서 계산 과정에서 long범위를 넘어 갈 수 있음
-					if(num%i!=0) {
-						break;
-					}
 					if(num>=a) {
 						answer ++;
 					}
+					
 				}
 			}
 		}
